@@ -1,27 +1,60 @@
+import { Locale } from "@/middleware"
 import Image from "next/image"
+
+const translations = {
+  de: {
+    LimSelf: "Limifyze Selfservice-Bar",
+    in30Sec: "In 30 Sekunden zum Lieblingsgetränk",
+    thisSystem: "Dieses System ermöglicht es dem Betreiber",
+    withOneFill:
+      "mit nur einer einzigen Füllung, ohne Personal bis zu 150 Cocktails",
+    or: "oder 300 Shots an seine Gäste zu verkaufen.",
+    theSelfserviceBar:
+      "Die SELFSERVICE-BAR ist ein vollautomatisches Getränke-Mix-, Ausschank- und Vending-System, mit dem der Gast nach Barschluss oder auch untertags in gut frequentierten Bereichen ohne Bar-Mitarbeiter selbst einen Cocktail mixen und per Kreditkarte oder Handy bezahlen kann.",
+  },
+  en: {
+    LimSelf: "Limifyze Selfservice-Bar",
+    in30Sec: "In 30 seconds to your favorite drink",
+    thisSystem: "This system allows the operator",
+    withOneFill:
+      "to sell up to 150 cocktails or 300 shots to his guests with just one filling, without personnel.",
+    or: "",
+    theSelfserviceBar:
+      "The SELFSERVICE-BAR is a fully automatic drink mixing, dispensing and vending system that allows the guest to mix a cocktail himself after closing time or during the day in well-frequented areas without bar staff and pay by credit card or mobile phone.",
+  },
+}
 
 const features = [
   {
-    name: "Selfservice.",
-    description:
-      "Ihre Gäste bedienen die Selfservice-Bar selbständig.Die Getränke werden automatisch ausgeschenkt und verkauft.",
+    name: { de: "Selfservice.", en: "Self-service." },
+    description: {
+      de: "Ihre Gäste bedienen die Selfservice-Bar selbständig.Die Getränke werden automatisch ausgeschenkt und verkauft.",
+      en: "Your guests serve themselves at the self-service bar. The drinks are automatically dispensed and sold.",
+    },
     icon: "/assets/icons/group.svg",
   },
   {
-    name: "Nützlich von morgens bis abends.",
-    description:
-      "Verschieben Sie die Selfservice-Bar mühelos zwischen Frühstück, Hotel, Lounge und Barbereich.",
+    name: {
+      de: "Nützlich von morgens bis abends.",
+      en: "Useful from morning to evening.",
+    },
+    description: {
+      de: "Verschieben Sie die Selfservice-Bar mühelos zwischen Frühstück, Hotel, Lounge und Barbereich.",
+      en: "Move the self-service bar effortlessly between breakfast, hotel, lounge and bar area.",
+    },
     icon: "/assets/icons/night.svg",
   },
   {
-    name: "Offener Ausschank.",
-    description:
-      "Die Getränke werden sichtbar aus der Original-Flasche ausgeschenkt. Perfekt für hochwertige Weine und Spirituosen.",
+    name: { de: "Offener Ausschank.", en: "Open dispensing." },
+    description: {
+      de: "Die Getränke werden sichtbar aus der Original-Flasche ausgeschenkt. Perfekt für hochwertige Weine und Spirituosen.",
+      en: "The drinks are visibly dispensed from the original bottle. Perfect for high-quality wines and spirits.",
+    },
     icon: "/assets/icons/liquor.svg",
   },
 ]
 
-export default function SSB_Prev() {
+export default function SSB_Prev({ lang }: { lang: Locale }) {
   return (
     <>
       <div className="overflow-hidden bg-white py-24 sm:py-32">
@@ -30,26 +63,18 @@ export default function SSB_Prev() {
             <div className="lg:ml-auto lg:pl-4 lg:pt-4">
               <div className="lg:max-w-lg">
                 <h2 className="text-base font-semibold leading-7 text-primary-500">
-                  Limifyze Selfservice-Bar
+                  {translations[lang].LimSelf}
                 </h2>
                 <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  In 30 Sekunden zum Lieblingsgetränk
+                  {translations[lang].in30Sec}
                 </p>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
-                  Dieses System ermöglicht es dem Betreiber{" "}
-                  <strong>
-                    mit nur einer einzigen Füllung, ohne Personal bis zu 150
-                    Cocktails
-                  </strong>
-                  , 300 Shots oder 40L Postmix Drinks an seine Gäste zu
-                  verkaufen.
+                  {translations[lang].thisSystem}{" "}
+                  <strong>{translations[lang].withOneFill} </strong>
+                  {translations[lang].or}
                   <br />
                   <br />
-                  Die SELFSERVICE-BAR ist ein vollautomatisches Getränke-Mix-,
-                  Ausschank- und Vending-System, mit dem der Gast nach
-                  Barschluss oder auch untertags in gut frequentierten Bereichen
-                  ohne Bar-Mitarbeiter selbst einen Cocktail mixen und per
-                  Kreditkarte oder Handy bezahlen kann.
+                  {translations[lang].theSelfserviceBar}
                 </p>
                 <div className="mt-10 flex items-center gap-x-6">
                   <a
@@ -65,10 +90,9 @@ export default function SSB_Prev() {
               <Image
                 src="/assets/ssb-top.png"
                 alt="Product screenshot"
-                className="max-w-none rounded-xl"
+                className="rounded-xl object-contain"
                 width={1500}
                 height={1500}
-                layout="responsive"
                 quality={100}
               />
             </div>
@@ -82,7 +106,7 @@ export default function SSB_Prev() {
               <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
                 <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                   {features.map((feature) => (
-                    <div key={feature.name} className="relative pl-9">
+                    <div key={feature.name[lang]} className="relative pl-9">
                       <dt className="inline font-semibold text-gray-900">
                         {/* <feature.icon
                           className="absolute left-1 top-1 h-5 w-5 text-indigo-600"
@@ -94,12 +118,11 @@ export default function SSB_Prev() {
                           className="absolute left-1 top-1 h-5 w-5 text-primary-600"
                           width={50}
                           height={50}
-                          layout="fixed"
                           quality={100}
                         />
-                        {feature.name}
+                        {feature.name[lang]}
                       </dt>{" "}
-                      <dd className="inline">{feature.description}</dd>
+                      <dd className="inline">{feature.description[lang]}</dd>
                     </div>
                   ))}
                 </dl>
@@ -112,8 +135,7 @@ export default function SSB_Prev() {
                   alt="Product screenshot"
                   width={1920}
                   height={1080}
-                  className="max-w-none bg-gray-800"
-                  layout="responsive"
+                  className="bg-gray-800"
                 />
               </div>
             </div>

@@ -2,16 +2,26 @@
 import { useState } from "react"
 import { Dialog } from "@headlessui/react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
+import { Locale } from "@/middleware"
 
 const navigation = [
-  { name: "Selfservice-Bar", href: "#" },
-  { name: "Ledovation", href: "https://ledovaiton.at" },
-  { name: "Über Uns", href: "#" },
-  { name: "Produktentwicklung", href: "#" },
-  { name: "Blog", href: "#" },
+  {
+    name: {
+      de: "Selfservice-Bar",
+      en: "Selfservice-Bar",
+    },
+    href: "#",
+  },
+  {
+    name: { de: "Ledovation", en: "Ledovation" },
+    href: "https://ledovaiton.at",
+  },
+  { name: { de: "Über Uns", en: "About Us" }, href: "#" },
+  { name: { de: "Produktentwicklung", en: "Product Development" }, href: "#" },
+  { name: { de: "Blog", en: "Blog" }, href: "#" },
 ]
 
-export default function Nav() {
+export default function Nav({ lang }: { lang: Locale }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -27,7 +37,7 @@ export default function Nav() {
               <img
                 alt="Your Company"
                 className="h-8 w-auto"
-                src="/logo.svg"
+                src="/assets/logo.svg"
               />
             </a>
             <button
@@ -38,14 +48,14 @@ export default function Nav() {
               <span className="sr-only">Open main menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
-            <div className="hidden lg:ml-auto lg:flex lg:gap-x-14">
+            <div className="hidden lg:ml-auto pr-4 lg:flex lg:gap-x-14">
               {navigation.map((item) => (
                 <a
-                  key={item.name}
+                  key={item.name[lang]}
                   href={item.href}
                   className="text-sm font-semibold leading-6 text-gray-900"
                 >
-                  {item.name}
+                  {item.name[lang]}
                 </a>
               ))}
             </div>
@@ -63,11 +73,7 @@ export default function Nav() {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
-                className="h-8 w-auto"
-                src="/logo.svg"
-                alt=""
-              />
+              <img className="h-8 w-auto" src="/logo.svg" alt="" />
             </a>
             <button
               type="button"
@@ -83,11 +89,11 @@ export default function Nav() {
               <div className="space-y-2 py-6">
                 {navigation.map((item) => (
                   <a
-                    key={item.name}
+                    key={item.name[lang]}
                     href={item.href}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
-                    {item.name}
+                    {item.name[lang]}
                   </a>
                 ))}
               </div>
