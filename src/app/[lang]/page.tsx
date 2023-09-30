@@ -5,6 +5,8 @@ import Ledovation_Prev from "../../components/Ledovation_Prev"
 import Nav from "../../components/Nav"
 import OurProducts from "../../components/OurProducts"
 import SSB_Prev from "../../components/SSB_Prev"
+import ContactCTA from "@/components/ContactCTA"
+import Footer from "@/components/Footer"
 
 export default function Home({
   params: { lang },
@@ -20,7 +22,9 @@ export default function Home({
       <OurProducts lang={lang} />
       <SSB_Prev lang={lang} />
       <Ledovation_Prev lang={lang} />
-      <DevWithLimifyze />
+      <DevWithLimifyze lang={lang} />
+      <ContactCTA lang={lang} />
+      <Footer lang={lang} />
     </main>
   )
 }

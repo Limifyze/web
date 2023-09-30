@@ -4,15 +4,15 @@ import Image from "next/image"
 
 const tranlsations = {
   de: {
-    drinks: "Getränke",
-    aroundTheClock: "Rund um die Uhr",
-    withoutPersonnel: "Ohne Personal",
+    drinks: "Getränke.",
+    aroundTheClock: "Rund um die Uhr.",
+    withoutPersonnel: "Ohne Personal.",
     cta: "Zur Selfservice-Bar",
   },
   en: {
-    drinks: "Drinks",
-    aroundTheClock: "Around the clock",
-    withoutPersonnel: "Without personnel",
+    drinks: "Drinks.",
+    aroundTheClock: "Around the clock.",
+    withoutPersonnel: "Without personnel.",
     cta: "To the self-service bar",
   },
 }

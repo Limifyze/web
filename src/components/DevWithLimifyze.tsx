@@ -4,35 +4,69 @@ import { useEffect, useState } from "react"
 import Image from "next/image"
 import { Tab } from "@headlessui/react"
 import clsx from "clsx"
+import { Locale } from "@/middleware"
+
+const translations = {
+  de: {
+    title: "Produktentwicklung mit Limifyze",
+    desc: "In den vergangenen Jahren haben wir jede Menge Erfahrungen in der Produktentwicklung gesammelt. Unsere Expertise reicht von der Konzeptionierung über die Entwicklung bis hin zur Serienreife. Wir begleiten Sie gerne auf Ihrem Weg zum fertigen Produkt.",
+    cta: "Mehr erfahren",
+  },
+  en: {
+    title: "Product Development with Limifyze",
+    desc: "In recent years we have gained a lot of experience in product development. Our expertise ranges from conceptualization to development to series maturity. We will be happy to accompany you on your way to the finished product.",
+    cta: "Learn more",
+  },
+}
 
 const features = [
   {
-    title: "Payroll",
-    description:
-      "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
+    title: {
+      de: "Lösungsfindung / Konzeptionierung",
+      en: "Solution Finding / Conceptualization",
+    },
+    description: {
+      de: "Gemeinsam analysieren wir die Ausgangssituation und erarbeiten verschiedene Lösungswege.",
+      en: "Together we analyze the initial situation and work out different solutions.",
+    },
     image: "/assets/drawing.png",
   },
   {
-    title: "Claim expenses",
-    description:
-      "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
-    image: "/assets/ssb-01.jpg",
+    title: {
+      de: "Entwicklung + Konstruktion",
+      en: "Development + Construction",
+    },
+    description: {
+      de: "Die gemeinsam erarbeitete Lösung wird in Code und Konstruktionen umgewandelt, um anschließend..",
+      en: "The jointly developed solution is converted into code and constructions and then...",
+    },
+    image: "/assets/proto.png",
   },
   {
-    title: "VAT handling",
-    description:
-      "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
-    image: "/assets/ssb-01.jpg",
+    title: {
+      de: "Prototyping -> Pilotphase",
+      en: "Prototyping -> Pilot Phase",
+    },
+    description: {
+      de: "... in Gestalt eines Prototyps das Licht der Welt zu erblicken. Dieser wird anschließend in der Pilotphase getestet und optimiert.",
+      en: "... see the light of day in the form of a prototype. This is then tested and optimized in the pilot phase.",
+    },
+    image: "/assets/pilot.JPG",
   },
   {
-    title: "Reporting",
-    description:
-      "Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.",
-    image: "/assets/ssb-01.jpg",
+    title: {
+      de: "Serienreife",
+      en: "Series maturity",
+    },
+    description: {
+      de: "Nach erfolgreicher Pilotphase wird das Produkt in Serie produziert und ausgeliefert.",
+      en: "After a successful pilot phase, the product is produced and delivered in series.",
+    },
+    image: "/assets/final.jpg",
   },
 ]
 
-export function DevWithLimifyze() {
+export function DevWithLimifyze({ lang }: { lang: Locale }) {
   let [tabOrientation, setTabOrientation] = useState<"horizontal" | "vertical">(
     "horizontal"
   )
@@ -62,8 +96,11 @@ export function DevWithLimifyze() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
-          Produktentwicklung mit Limifyze
+            {translations[lang].title}
           </h2>
+          <p className="mt-4 text-gray-700 sm:mt-6 md:mt-8 max-w-2xl mx-auto">
+            {translations[lang].desc}
+          </p>
         </div>
         <Tab.Group
           as="div"
@@ -76,7 +113,7 @@ export function DevWithLimifyze() {
                 <Tab.List className="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
                   {features.map((feature, featureIndex) => (
                     <div
-                      key={feature.title}
+                      key={feature.title[lang]}
                       className={clsx(
                         "group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6",
                         selectedIndex === featureIndex
@@ -94,7 +131,7 @@ export function DevWithLimifyze() {
                           )}
                         >
                           <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none" />
-                          {feature.title}
+                          {feature.title[lang]}
                         </Tab>
                       </h3>
                       <p
@@ -105,7 +142,7 @@ export function DevWithLimifyze() {
                             : "text-primary-900 group-hover:text-gray-900"
                         )}
                       >
-                        {feature.description}
+                        {feature.description[lang]}
                       </p>
                     </div>
                   ))}
@@ -113,15 +150,15 @@ export function DevWithLimifyze() {
               </div>
               <Tab.Panels className="lg:col-span-7">
                 {features.map((feature) => (
-                  <Tab.Panel key={feature.title} unmount={false}>
+                  <Tab.Panel key={feature.title[lang]} unmount={false}>
                     <div className="relative sm:px-6 lg:hidden">
                       <p className="relative mx-auto max-w-2xl text-base text-gray-900 sm:text-center">
-                        {feature.description}
+                        {feature.description[lang]}
                       </p>
                     </div>
-                    <div className="mt-10 overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-primary-900/20 lg:mt-0 min-h-[500px] relative flex">
+                    <div className="mt-10 overflow-hidden rounded-xl shadow-xl shadow-primary-900/20 lg:mt-0 relative flex">
                       <Image
-                        className="object-contain object-center w-full h-full max-h-[400px] my-auto relative"
+                        className="object-contain object-center w-full h-full max-h-[500px] my-auto relative"
                         src={feature.image}
                         alt=""
                         priority
@@ -135,6 +172,14 @@ export function DevWithLimifyze() {
             </>
           )}
         </Tab.Group>
+        <div className="mt-10 flex">
+          <a
+            href="#"
+            className="rounded-md bg-white px-8 py-2.5 font-semibold text-color shadow-sm hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500"
+          >
+            {translations[lang].cta}
+          </a>
+        </div>
       </div>
     </section>
   )
