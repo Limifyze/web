@@ -42,6 +42,6 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     "/",
-    // TODO: add all routes here
+    "/ssb"
   ],
 }

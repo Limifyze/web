@@ -1,12 +1,12 @@
 import { Locale } from "@/middleware"
-import { DevWithLimifyze } from "../../components/DevWithLimifyze"
-import Hero from "../../components/Hero"
-import Ledovation_Prev from "../../components/Ledovation_Prev"
-import Nav from "../../components/Nav"
-import OurProducts from "../../components/OurProducts"
-import SSB_Prev from "../../components/SSB_Prev"
-import ContactCTA from "@/components/ContactCTA"
-import Footer from "@/components/Footer"
+import { DevWithLimifyze } from "../../components/home/DevWithLimifyze"
+import Hero from "../../components/home/Hero"
+import Ledovation_Prev from "../../components/home/Ledovation_Prev"
+import Nav from "../../components/home/Nav"
+import OurProducts from "../../components/home/OurProducts"
+import SSB_Prev from "../../components/home/SSB_Prev"
+import ContactCTA from "@/components/home/ContactCTA"
+import Footer from "@/components/home/Footer"
 
 export default function Home({
   params: { lang },
