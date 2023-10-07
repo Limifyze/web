@@ -59,7 +59,7 @@ export default function Ledovation_Prev({ lang }: { lang: Locale }) {
           <div className="flex items-start justify-end lg:order-first">
             <Image
               src="/assets/ledovation.jpg"
-              alt="Product screenshot"
+              alt="Ledovation"
               className="rounded-xl"
               width={1500}
               height={1500}

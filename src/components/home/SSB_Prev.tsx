@@ -11,6 +11,7 @@ const translations = {
     or: "oder 300 Shots an seine Gäste zu verkaufen.",
     theSelfserviceBar:
       "Die SELFSERVICE-BAR ist ein vollautomatisches Getränke-Mix-, Ausschank- und Vending-System, mit dem der Gast nach Barschluss oder auch untertags in gut frequentierten Bereichen ohne Bar-Mitarbeiter selbst einen Cocktail mixen und per Kreditkarte oder Handy bezahlen kann.",
+    cta: "Zur Selfservice-Bar",
   },
   en: {
     LimSelf: "Limifyze Selfservice-Bar",
@@ -21,6 +22,7 @@ const translations = {
     or: "",
     theSelfserviceBar:
       "The SELFSERVICE-BAR is a fully automatic drink mixing, dispensing and vending system that allows the guest to mix a cocktail himself after closing time or during the day in well-frequented areas without bar staff and pay by credit card or mobile phone.",
+    cta: "To the self-service bar",
   },
 }
 
@@ -81,7 +83,7 @@ export default function SSB_Prev({ lang }: { lang: Locale }) {
                     href="#"
                     className="rounded-md bg-primary-500 px-8 py-2.5 font-semibold shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500"
                   >
-                    Zur Selfservice-Bar
+                    {translations[lang].cta}
                   </a>
                 </div>
               </div>
@@ -89,7 +91,7 @@ export default function SSB_Prev({ lang }: { lang: Locale }) {
             <div className="flex items-start justify-end lg:order-first">
               <Image
                 src="/assets/ssb-top.png"
-                alt="Product screenshot"
+                alt="SSB Top View"
                 className="rounded-xl object-contain"
                 width={1500}
                 height={1500}
@@ -100,7 +102,7 @@ export default function SSB_Prev({ lang }: { lang: Locale }) {
         </div>
       </div>
       <div className="overflow-hidden bg-white">
-        <div className="mx-auto max-w-7xl md:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
             <div className="px-6 lg:px-0 lg:pr-4 lg:pt-4">
               <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
@@ -132,7 +134,7 @@ export default function SSB_Prev({ lang }: { lang: Locale }) {
               <div className="relative isolate overflow-hidden bg-primary-500 rounded-xl">
                 <Image
                   src="/assets/ssb-happy.jpg"
-                  alt="Product screenshot"
+                  alt="Happy SSB"
                   width={1920}
                   height={1080}
                   className="bg-gray-800"
