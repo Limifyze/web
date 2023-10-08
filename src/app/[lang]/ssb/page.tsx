@@ -10,6 +10,7 @@ import Content from "@/components/ssb/Content"
 import Video from "@/components/ssb/Video"
 import Dekors from "@/components/ssb/Dekors"
 import Hygiene from "@/components/ssb/Hygiene"
+import IoT from "@/components/ssb/IoT"
 
 export default function Home({
   params: { lang },
@@ -19,7 +20,7 @@ export default function Home({
   }
 }) {
   return (
-    <main className="bg-white">
+    <main className="bg-white overflow-x-hidden">
       <Nav lang={lang} />
       <Hero lang={lang} />
       <ManyFeatures lang={lang} />
@@ -29,6 +30,7 @@ export default function Home({
       <Video />
       <Dekors lang={lang} />
       <Hygiene lang={lang} />
+      <IoT lang={lang} />
       <ContactCTA lang={lang} />
       <Footer lang={lang} />
     </main>
