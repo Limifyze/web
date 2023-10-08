@@ -16,7 +16,6 @@ function getLocale(request: NextRequest) {
     },
   })
   let locale = negotiator.language(locales)
-  console.log("locale", locale)
   return locale
 }
 
@@ -26,8 +25,6 @@ export function middleware(request: NextRequest) {
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   )
-
-  console.log("pathnameHasLocale", pathnameHasLocale)
 
   if (pathnameHasLocale) return
 
@@ -40,8 +37,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: [
-    "/",
-    "/ssb"
-  ],
+  matcher: ["/", "/ssb", "/about"],
 }

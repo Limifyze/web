@@ -3,6 +3,7 @@ import { useState } from "react"
 import { Dialog } from "@headlessui/react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 import { Locale } from "@/middleware"
+import Link from "next/link"
 
 const navigation = [
   {
@@ -10,13 +11,13 @@ const navigation = [
       de: "Selfservice-Bar",
       en: "Selfservice-Bar",
     },
-    href: "#",
+    href: "/ssb",
   },
   {
     name: { de: "Ledovation", en: "Ledovation" },
-    href: "https://ledovaiton.at",
+    href: "https://ledovation.at",
   },
-  { name: { de: "Über Uns", en: "About Us" }, href: "#" },
+  { name: { de: "Über Uns", en: "About Us" }, href: "/about" },
   { name: { de: "Produktentwicklung", en: "Product Development" }, href: "#" },
   { name: { de: "Blog", en: "Blog" }, href: "#" },
 ]
@@ -32,14 +33,14 @@ export default function Nav({ lang }: { lang: Locale }) {
             className="flex items-center justify-between lg:justify-start"
             aria-label="Global"
           >
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+            <Link href="/" className="-m-1.5 p-1.5">
+              <span className="sr-only">Limifyze GmbH</span>
               <img
-                alt="Your Company"
+                alt="Limifyze GmbH"
                 className="h-8 w-auto"
                 src="/assets/logo.svg"
               />
-            </a>
+            </Link>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden"
@@ -71,10 +72,10 @@ export default function Nav({ lang }: { lang: Locale }) {
         <div className="fixed inset-0 z-50" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+            <Link href="/" className="-m-1.5 p-1.5">
+              <span className="sr-only">Limifyze GmbH</span>
               <img className="h-8 w-auto" src="/logo.svg" alt="" />
-            </a>
+            </Link>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -87,15 +88,26 @@ export default function Nav({ lang }: { lang: Locale }) {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name[lang]}
-                    href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    {item.name[lang]}
-                  </a>
-                ))}
+                {navigation.map((item) =>
+                  item.href.startsWith("/") ? (
+                    <Link
+                      key={item.name[lang]}
+                      href={item.href}
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      {item.name[lang]}
+                    </Link>
+                  ) : (
+                    <a
+                      key={item.name[lang]}
+                      href={item.href}
+                      target="_blank"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      {item.name[lang]}
+                    </a>
+                  )
+                )}
               </div>
               <div className="py-6">
                 <a
