@@ -18,7 +18,10 @@ const navigation = [
     href: "https://ledovation.at",
   },
   { name: { de: "Über Uns", en: "About Us" }, href: "/about" },
-  { name: { de: "Produktentwicklung", en: "Product Development" }, href: "#" },
+  {
+    name: { de: "Produktentwicklung", en: "Product Development" },
+    href: "/development",
+  },
   { name: { de: "Blog", en: "Blog" }, href: "#" },
 ]
 

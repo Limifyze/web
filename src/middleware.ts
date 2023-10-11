@@ -37,5 +37,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/", "/ssb", "/about"],
+  matcher: ["/", "/ssb", "/about", "/development"],
 }

@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Tab } from "@headlessui/react"
 import clsx from "clsx"
 import { Locale } from "@/middleware"
+import Link from "next/link"
 
 const translations = {
   de: {
@@ -173,12 +174,12 @@ export function DevWithLimifyze({ lang }: { lang: Locale }) {
           )}
         </Tab.Group>
         <div className="mt-10 flex">
-          <a
-            href="#"
+          <Link
+            href="/development"
             className="rounded-md bg-white px-8 py-2.5 font-semibold text-color shadow-sm hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500"
           >
             {translations[lang].cta}
-          </a>
+          </Link>
         </div>
       </div>
     </section>
