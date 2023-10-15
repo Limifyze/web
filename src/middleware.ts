@@ -3,7 +3,7 @@ import Negotiator from "negotiator"
 import { NextRequest } from "next/server"
 
 export type Locale = "en" | "de"
-let locales: Locale[] = ["en", "de"]
+export const locales: Locale[] = ["en", "de"]
 
 // Get the preferred locale, similar to the above or using a library
 function getLocale(request: NextRequest) {

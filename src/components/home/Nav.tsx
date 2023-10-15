@@ -2,7 +2,7 @@
 import { useState } from "react"
 import { Dialog } from "@headlessui/react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
-import { Locale } from "@/middleware"
+import { Locale, locales } from "@/middleware"
 import Link from "next/link"
 
 const navigation = [
@@ -54,14 +54,37 @@ export default function Nav({ lang }: { lang: Locale }) {
             </button>
             <div className="hidden lg:ml-auto pr-4 lg:flex lg:gap-x-14">
               {navigation.map((item) => (
-                <a
+                <Link
                   key={item.name[lang]}
-                  href={item.href}
+                  href={"/" + lang + item.href}
                   className="text-sm font-semibold leading-6 text-gray-900"
                 >
                   {item.name[lang]}
-                </a>
+                </Link>
               ))}
+              {locales && (
+                <div>
+                  <select
+                    id="location"
+                    name="location"
+                    className="block rounded-md border-gray-700 border border-s py-2 pl-3 pr-10 text-base focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm"
+                    defaultValue={lang.toUpperCase()}
+                    onChange={(e) => {
+                      const locale = e.target.value.toLowerCase()
+                      window.location.href = `/${locale}/${window.location.pathname.replace(
+                        `/${lang}`,
+                        "/"
+                      )}`
+                    }}
+                  >
+                    {locales.map((locale) => (
+                      <option key={locale} value={locale.toUpperCase()}>
+                        {locale.toUpperCase()}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              )}
             </div>
           </nav>
         </div>
@@ -95,7 +118,7 @@ export default function Nav({ lang }: { lang: Locale }) {
                   item.href.startsWith("/") ? (
                     <Link
                       key={item.name[lang]}
-                      href={item.href}
+                      href={"/" + lang + item.href}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
                       {item.name[lang]}
@@ -113,12 +136,29 @@ export default function Nav({ lang }: { lang: Locale }) {
                 )}
               </div>
               <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Log in
-                </a>
+                {locales && (
+                  <div className="mr-8">
+                    <select
+                      id="location"
+                      name="location"
+                      className="my-1 block rounded-md border-gray-700 border border-s py-2 pl-3 pr-10 text-base focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm"
+                      defaultValue={lang.toUpperCase()}
+                      onChange={(e) => {
+                        const locale = e.target.value.toLowerCase()
+                        window.location.href = `/${locale}/${window.location.pathname.replace(
+                          `/${lang}`,
+                          "/"
+                        )}`
+                      }}
+                    >
+                      {locales.map((locale) => (
+                        <option key={locale} value={locale.toUpperCase()}>
+                          {locale.toUpperCase()}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                )}
               </div>
             </div>
           </div>
