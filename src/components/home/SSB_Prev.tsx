@@ -81,7 +81,7 @@ export default function SSB_Prev({ lang }: { lang: Locale }) {
                 </p>
                 <div className="mt-10 flex items-center gap-x-6">
                   <Link
-                    href="/ssb"
+                    href={"/" + lang + "/ssb"}
                     className="rounded-md bg-primary-500 px-8 py-2.5 font-semibold shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500"
                   >
                     {translations[lang].cta}
