@@ -1,8 +1,6 @@
-import { Locale } from "@/middleware"
-import "../globals.css"
+import "./globals.css"
 import type { Metadata, ResolvingMetadata } from "next"
 import { Open_Sans } from "next/font/google"
-import Script from "next/script"
 
 const open_sans = Open_Sans({ subsets: ["latin"] })
 
