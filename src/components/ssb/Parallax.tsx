@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 
 export default function Parallax() {
-  const [isVideoPaused, setIsVideoPaused] = useState<boolean>(true)
+  const [isVideoPaused, setIsVideoPaused] = useState<boolean>(false)
 
   useEffect(() => {
     const ua = navigator.userAgent.toLowerCase()
