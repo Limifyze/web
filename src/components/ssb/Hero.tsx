@@ -1,6 +1,5 @@
 "use client"
 import { Locale } from "@/middleware"
-import Image from "next/image"
 
 const tranlsations = {
   de: {

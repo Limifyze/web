@@ -13,16 +13,16 @@ const navigation = [
     },
     href: "/ssb",
   },
-  {
-    name: { de: "Ledovation", en: "Ledovation" },
-    href: "https://ledovation.at",
-  },
   { name: { de: "Über Uns", en: "About Us" }, href: "/about" },
   {
     name: { de: "Produktentwicklung", en: "Product Development" },
     href: "/development",
   },
-  { name: { de: "Blog", en: "Blog" }, href: "#" },
+  // { name: { de: "Blog", en: "Blog" }, href: "#" },
+  {
+    name: { de: "Ledovation", en: "Ledovation" },
+    href: "https://ledovation.at",
+  },
 ]
 
 export default function Nav({ lang }: { lang: Locale }) {

@@ -23,7 +23,7 @@ const translations = {
 const features = [
   {
     title: {
-      de: "Lösungsfindung / Konzeptionierung",
+      de: "Lösungsfindung",
       en: "Solution Finding / Conceptualization",
     },
     description: {

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+                        http://www.w3.org/1999/xhtml http://www.w3.org/2002/08/xhtml/xhtml1-strict.xsd"
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://limifyze.com</loc>
+        <lastmod>2021-09-21T00:00:00+00:00</lastmod>
+        <priority>1.00</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://limifyze.com/de" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://limifyze.com/en" />
+    </url>
+    <url>
+        <loc>https://limifyze.com/development</loc>
+        <lastmod>2023-10-16T00:00:00+00:00</lastmod>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://limifyze.com/de/development" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://limifyze.com/en/development" />
+    </url>
+    <url>
+        <loc>https://limifyze.com/about</loc>
+        <lastmod>2023-10-16T00:00:00+00:00</lastmod>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://limifyze.com/de/about" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://limifyze.com/en/about" />
+    </url>
+    <url>
+        <loc>https://limifyze.com/ssb</loc>
+        <lastmod>2023-10-16T00:00:00+00:00</lastmod>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://limifyze.com/de/ssb" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://limifyze.com/en/ssb" />
+    </url>
+    <url>
+        <loc>https://limifyze.com/legal</loc>
+        <lastmod>2023-09-21T00:00:00+00:00</lastmod>
+        <priority>0.40</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://limifyze.com/de/legal" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://limifyze.com/en/legal" />
+    </url>
+    <url>
+        <loc>https://limifyze.com/disclaimer</loc>
+        <lastmod>2023-09-21T00:00:00+00:00</lastmod>
+        <priority>0.40</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://limifyze.com/de/disclaimer" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://limifyze.com/en/disclaimer" />
+    </url>
+</urlset>

@@ -96,13 +96,6 @@ const Footer = ({ lang }: { lang: Locale }) => {
                 >
                   {navigation.translations[lang].privacy}
                 </Link>
-                <Link
-                  lang={lang}
-                  href="/agb.pdf"
-                  className="md:text-right leading-6 text-gray-500 hover:text-gray-900"
-                >
-                  {navigation.translations[lang].agb}
-                </Link>
               </div>
             </div>
           </div>

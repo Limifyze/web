@@ -1,13 +1,7 @@
+"use client"
 import { Locale } from "@/middleware"
-import {
-  ArrowPathIcon,
-  CloudArrowUpIcon,
-  Cog6ToothIcon,
-  FingerPrintIcon,
-  LockClosedIcon,
-  ServerIcon,
-} from "@heroicons/react/20/solid"
 import Image from "next/image"
+import { Fade } from "react-awesome-reveal"
 
 const translations = {
   de: {
@@ -70,14 +64,16 @@ export default function ManyFeatures({ lang }: { lang: Locale }) {
       </div>
       <div className="relative overflow-hidden">
         <div className="mx-auto max-w-7xl">
-          <Image
-            src="/assets/ssb-top.png"
-            alt="Selfservice Bar"
-            className="lg:max-w-3xl mx-auto object-contain max-w-full"
-            width={1500}
-            height={1500}
-            quality={100}
-          />
+          <Fade>
+            <Image
+              src="/assets/ssb-top.png"
+              alt="Selfservice Bar"
+              className="lg:max-w-3xl mx-auto object-contain max-w-full"
+              width={1500}
+              height={1500}
+              quality={100}
+            />
+          </Fade>
         </div>
       </div>
       <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
@@ -87,13 +83,14 @@ export default function ManyFeatures({ lang }: { lang: Locale }) {
               <dt className="inline font-semibold text-gray-900 text-lg">
                 <Image
                   src={feature.icon}
-                  alt=""
+                  alt="Selfservice Bar"
                   className="absolute -left-5 -top-1 h-12 w-12 text-primary-600"
                   width={100}
                   height={100}
                   quality={100}
                 />
-                {feature.name[lang]}<br />
+                {feature.name[lang]}
+                <br />
               </dt>
               <dd className="inline">{feature.description[lang]}</dd>
             </div>

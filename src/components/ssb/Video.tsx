@@ -18,7 +18,7 @@ export default function Video() {
 
   const videoStyle = isVideoPaused
     ? "w-full h-full max-w-[2000px] object-cover hidden"
-    : "w-full h-full max-w-[2000px] object-cover"
+    : "w-full h-full max-w-[2000px] mx-auto object-cover"
 
   return (
     <div className="mt-12">
@@ -26,9 +26,14 @@ export default function Video() {
         <source src="/assets/turntable.mp4" type="video/mp4" />
       </video>
       {isVideoPaused && (
-        <div
-          className={`bg-[url("/_next/image?url=/assets/turntable_frame.jpg&w=1920&q=80")] bg-no-repeat bg-center bg-cover w-full h-[400px] bg-fixed`}
-        ></div>
+        <Image
+          className="object-cover object-center w-full h-full max-h-[600px] relative my-24"
+          src="/assets/turntable_frame.jpg"
+          width={1920}
+          height={1080}
+          quality={100}
+          alt="Limifyze 24/7"
+        />
       )}
     </div>
   )

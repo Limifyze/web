@@ -1,6 +1,8 @@
+"use client"
 import { Locale } from "@/middleware"
 import Image from "next/image"
 import BackgroundY from "../BackgroundY"
+import { Fade } from "react-awesome-reveal"
 
 const translations = {
   de: {
@@ -89,27 +91,31 @@ export default function Functionality({ lang }: { lang: Locale }) {
           </p>
         </div>
         <div className="mt-24 grid gap-16 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12 relative">
-          {functionalites.map((feature) => (
+          {functionalites.map((feature, idx) => (
             <div key={feature.number} className="z-10">
-              <div className="mt-6">
-                <Image
-                  className="h-56 w-full object-cover shadow-lg rounded-2xl"
-                  src={feature.image}
-                  alt={feature.title[lang]}
-                  width={300}
-                  height={300}
-                  quality={100}
-                />
-              </div>
-              <div className="mt-6">
-                <span className="text-gray-500">{feature.number}</span>
-                <h3 className="text-2xl font-bold text-gray-900 mt-2">
-                  {feature.title[lang]}
-                </h3>
-                <p className="mt-2 text-base text-gray-500">
-                  {feature.description[lang]}
-                </p>
-              </div>
+              <Fade delay={idx * 100} triggerOnce>
+                <div>
+                  <div className="mt-6">
+                    <Image
+                      className="h-56 w-full object-cover shadow-lg rounded-2xl"
+                      src={feature.image}
+                      alt={feature.title[lang]}
+                      width={300}
+                      height={300}
+                      quality={100}
+                    />
+                  </div>
+                  <div className="mt-6">
+                    <span className="text-gray-500">{feature.number}</span>
+                    <h3 className="text-2xl font-bold text-gray-900 mt-2">
+                      {feature.title[lang]}
+                    </h3>
+                    <p className="mt-2 text-base text-gray-500">
+                      {feature.description[lang]}
+                    </p>
+                  </div>
+                </div>
+              </Fade>
             </div>
           ))}
           <BackgroundY />

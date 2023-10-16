@@ -1,5 +1,7 @@
 "use client"
 import { Locale } from "@/middleware"
+import { Slide, Fade } from "react-awesome-reveal"
+import "animate.css"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -31,25 +33,30 @@ export default function Hero({ lang }: { lang: Locale }) {
               <br />
               {tranlsations[lang].withoutPersonnel}
             </h1>
-            <div className="mt-10 flex items-center gap-x-6">
-              <Link
-                href="/ssb"
-                className="rounded-md bg-primary-500 px-8 py-2.5 font-semibold text-color shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500"
-              >
-                {tranlsations[lang].cta}
-              </Link>
-            </div>
+            <Fade delay={400} triggerOnce>
+              <div className="mt-10 flex items-center gap-x-6">
+                <Link
+                  href="/ssb"
+                  className="rounded-md bg-primary-500 px-8 py-2.5 font-semibold text-color shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500"
+                >
+                  {tranlsations[lang].cta}
+                </Link>
+              </div>
+            </Fade>
           </div>
           <div className="mx-auto mt-16 flex sm:mt-24 lg:mr-0 lg:mt-0 lg:col-span-8">
             <div className="max-w-3xl sm:max-w-5xl w-full">
-              <Image
-                src="/assets/ssb-01.jpg"
-                alt="Limifyze Selfservice-Bar"
-                width={1920}
-                height={1080}
-                className="rounded-xl shadow-2xl"
-                quality={90}
-              />
+              <Slide direction="right" delay={200} triggerOnce>
+                <Image
+                  src="/assets/ssb-01.jpg"
+                  alt="Limifyze Selfservice-Bar"
+                  width={1920}
+                  height={1080}
+                  className="rounded-xl shadow-2xl"
+                  quality={90}
+                  priority
+                />
+              </Slide>
             </div>
           </div>
         </div>
