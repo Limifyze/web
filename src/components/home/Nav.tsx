@@ -64,6 +64,7 @@ export default function Nav({ lang }: { lang: Locale }) {
                   </Link>
                 ) : (
                   <a
+                    key={item.name[lang]}
                     href={item.href}
                     target="_blank"
                     className="text-sm font-semibold leading-6 text-gray-900"
