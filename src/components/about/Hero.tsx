@@ -1,6 +1,7 @@
 "use client"
 import { Locale } from "@/middleware"
 import Image from "next/image"
+import { Slide } from "react-awesome-reveal"
 
 const tranlsations = {
   de: {
@@ -23,14 +24,16 @@ export default function Hero({ lang }: { lang: Locale }) {
           </div>
           <div className="mx-auto mt-16 flex sm:mt-24 lg:mr-0 lg:mt-0 lg:col-span-8">
             <div className="max-w-3xl sm:max-w-5xl w-full">
-              <Image
-                src="/assets/team.jpg"
-                alt="Limifyze Team"
-                width={1920}
-                height={1080}
-                className="rounded-xl shadow-2xl"
-                quality={90}
-              />
+              <Slide direction="right" triggerOnce>
+                <Image
+                  src="/assets/team.jpg"
+                  alt="Limifyze Team"
+                  width={1920}
+                  height={1080}
+                  className="rounded-xl shadow-2xl"
+                  quality={90}
+                />
+              </Slide>
             </div>
           </div>
         </div>
