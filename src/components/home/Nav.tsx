@@ -53,15 +53,25 @@ export default function Nav({ lang }: { lang: Locale }) {
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
             <div className="hidden lg:ml-auto pr-4 lg:flex lg:gap-x-14">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name[lang]}
-                  href={"/" + lang + item.href}
-                  className="text-sm font-semibold leading-6 text-gray-900"
-                >
-                  {item.name[lang]}
-                </Link>
-              ))}
+              {navigation.map((item) =>
+                item.href.startsWith("/") ? (
+                  <Link
+                    key={item.name[lang]}
+                    href={"/" + lang + item.href}
+                    className="text-sm font-semibold leading-6 text-gray-900"
+                  >
+                    {item.name[lang]}
+                  </Link>
+                ) : (
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    className="text-sm font-semibold leading-6 text-gray-900"
+                  >
+                    {item.name[lang]}
+                  </a>
+                )
+              )}
               {locales && (
                 <div>
                   <select
