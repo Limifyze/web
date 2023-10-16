@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 // import Home from "./[version]/page"
 
 // get AB test variant from query param

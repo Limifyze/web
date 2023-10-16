@@ -8,7 +8,7 @@ const texts = {
   },
   en: {
     title: "Our Team",
-    text: "Limifyze is a developer and manufacturer of smart products for the catering industry from Alberschwende in Vorarlberg.",
+    text: "Limifyze is a developer and manufacturer of smart products for the gastronomy industry from Alberschwende in Vorarlberg.",
   },
 }
 

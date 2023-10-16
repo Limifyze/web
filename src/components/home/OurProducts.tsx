@@ -13,7 +13,7 @@ const tranlsations = {
     for: "For the future of hospitality.",
     weWant:
       "We want to end the shortage of personnel in the long term and sustainably",
-    and: "and thereby create a more pleasant working environment in the hotel and catering industry. That's exactly what we work on every day.",
+    and: "and thereby create a more pleasant working environment in the hotel and gastronomy industry. That's exactly what we work on every day.",
     as: "As a developer and manufacturer of automation and IoT products, our goal is to develop and produce innovative products through modern technologies.",
   },
 }

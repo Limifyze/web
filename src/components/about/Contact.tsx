@@ -7,7 +7,7 @@ import {
   PhoneIcon,
 } from "@heroicons/react/24/outline"
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 const translations = {
   en: {
@@ -46,6 +46,25 @@ function classNames(...classes: any[]) {
 }
 
 const Contact = ({ locale }: { locale: Locale }) => {
+  const contact = useRef<HTMLDivElement>(null)
+
+  const onScroll = (to: string) => {
+    if (!contact.current) return
+
+    if (to === "contact") {
+      contact.current.scrollIntoView({
+        behavior: "smooth",
+      })
+    }
+  }
+
+  useEffect(() => {
+    const reference = window.location.href.split("#")[1]
+    if (reference && reference.length > 0) {
+      onScroll(reference)
+    }
+  }, [])
+
   const [agreed, setAgreed] = useState(false)
   const [privacyError, setPrivacyError] = useState(false)
   const [emailError, setEmailError] = useState(false)
@@ -98,7 +117,7 @@ const Contact = ({ locale }: { locale: Locale }) => {
   }
 
   return (
-    <div className="relative isolate bg-white">
+    <div className="relative isolate bg-white" ref={contact}>
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="relative px-6 pt-24 pb-20 sm:pt-32 lg:static lg:py-48 lg:px-8">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
