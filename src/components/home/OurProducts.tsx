@@ -2,18 +2,18 @@ import { Locale } from "@/middleware"
 
 const tranlsations = {
   de: {
-    ourProds: "Unsere Produkte.",
+    ourProds: "Smarte Produkte.",
     for: "Für die Zukunft der Gastlichkeit.",
-    weWant: "Wir wollen den Personalmangel langfristig und nachhaltig beenden",
-    and: "und dabei eine angenehmere Arbeitsumgebung in der Hotellerie und Gastronomie schaffen. Genau daran arbeiten wir jeden Tag.",
+    weWant: "Wir entwickeln neue Produkte für Hotels und Restaurants.",
+    and: "Maximale Gästezufriedenheit mit effizientem Personaleinsatz ist unser Ziel. Daran arbeiten wir täglich gemeinsam mit unseren Kunden.",
     as: "Als Entwickler und Hersteller von Automatisierungs- und IoT-Produkten ist es unser Ziel durch moderne Technologien innovative Produkte zu entwickeln und zu produzieren.",
   },
   en: {
-    ourProds: "Our Products.",
+    ourProds: "Smart Products.",
     for: "For the future of hospitality.",
     weWant:
-      "We want to end the shortage of personnel in the long term and sustainably",
-    and: "and thereby create a more pleasant working environment in the hotel and gastronomy industry. That's exactly what we work on every day.",
+      "We develop new products for hotels and restaurants.",
+    and: "Maximum guest satisfaction with efficient staff deployment is our goal. We work on this every day together with our customers.",
     as: "As a developer and manufacturer of automation and IoT products, our goal is to develop and produce innovative products through modern technologies.",
   },
 }

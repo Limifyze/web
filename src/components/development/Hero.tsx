@@ -18,7 +18,7 @@ const tranlsations = {
 export default function Hero({ lang }: { lang: Locale }) {
   return (
     <>
-      <div className="relative isolate overflow-hidden bg-gradient-to-r from-white to-primary-200 pt-12">
+      <div className="relative isolate overflow-hidden bg-gradient-to-r bg-white pt-12">
         <div className="mx-auto max-w-7xl px-6 pb-24 pt-20 sm:pb-32 lg:py-40 lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
           <div className="mt-auto lg:col-span-4">
             <h1 className="text-2xl font-black text-gray-900 sm:text-3xl">

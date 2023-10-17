@@ -28,14 +28,14 @@ export async function generateMetadata(
   return {
     title: "Limifyze",
     description:
-      "Wir wollen den Personalmangel langfristig und nachhaltig beenden und dabei eine angenehmere Arbeitsumgebung in der Hotellerie und Gastronomie schaffen. Genau daran arbeiten wir jeden Tag.",
+      "Wir entwickeln neue Produkte für Hotels und Restaurants. Maximale Gästezufriedenheit mit effizientem Personaleinsatz ist unser Ziel. Daran arbeiten wir täglich gemeinsam mit unseren Kunden.",
     openGraph: {
       type: "website",
       locale: "de",
       url: "https://limifyze.com/de",
       title: "Limifyze",
       description:
-        "Wir wollen den Personalmangel langfristig und nachhaltig beenden und dabei eine angenehmere Arbeitsumgebung in der Hotellerie und Gastronomie schaffen. Genau daran arbeiten wir jeden Tag.",
+        "Wir entwickeln neue Produkte für Hotels und Restaurants. Maximale Gästezufriedenheit mit effizientem Personaleinsatz ist unser Ziel. Daran arbeiten wir täglich gemeinsam mit unseren Kunden.",
       images: [
         {
           url: "https://limifyze.com/_next/image?url=%2Fassets%2Fssb-01.jpg&w=1920&q=90",

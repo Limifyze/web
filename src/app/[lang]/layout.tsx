@@ -34,14 +34,14 @@ export async function generateMetadata(
     return {
       title: "Limifyze",
       description:
-        "Wir wollen den Personalmangel langfristig und nachhaltig beenden und dabei eine angenehmere Arbeitsumgebung in der Hotellerie und Gastronomie schaffen. Genau daran arbeiten wir jeden Tag.",
+        "Wir entwickeln neue Produkte für Hotels und Restaurants. Maximale Gästezufriedenheit mit effizientem Personaleinsatz ist unser Ziel. Daran arbeiten wir täglich gemeinsam mit unseren Kunden.",
       openGraph: {
         type: "website",
         locale: "de",
         url: "https://limifyze.com/de",
         title: "Limifyze",
         description:
-          "Wir wollen den Personalmangel langfristig und nachhaltig beenden und dabei eine angenehmere Arbeitsumgebung in der Hotellerie und Gastronomie schaffen. Genau daran arbeiten wir jeden Tag.",
+          "Wir entwickeln neue Produkte für Hotels und Restaurants. Maximale Gästezufriedenheit mit effizientem Personaleinsatz ist unser Ziel. Daran arbeiten wir täglich gemeinsam mit unseren Kunden.",
         images: [
           {
             url: "https://limifyze.com/_next/image?url=%2Fassets%2Fssb-01.jpg&w=1920&q=90",
@@ -57,14 +57,14 @@ export async function generateMetadata(
     return {
       title: "Limifyze",
       description:
-        "We want to end the staff shortage in the long term and sustainably and at the same time create a more pleasant working environment in the hotel and gastronomy industry. That's exactly what we work on every day.",
+        "We develop new products for hotels and restaurants. Maximum guest satisfaction with efficient staff deployment is our goal. We work on this every day together with our customers.",
       openGraph: {
         type: "website",
         locale: "en",
         url: "https://limifyze.com/en",
         title: "Limifyze",
         description:
-          "We want to end the staff shortage in the long term and sustainably and at the same time create a more pleasant working environment in the hotel and gastronomy industry. That's exactly what we work on every day.",
+          "We develop new products for hotels and restaurants. Maximum guest satisfaction with efficient staff deployment is our goal. We work on this every day together with our customers.",
         images: [
           {
             url: "https://limifyze.com/_next/image?url=%2Fassets%2Fssb-01.jpg&w=1920&q=90",
