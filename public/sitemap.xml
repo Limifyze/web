@@ -40,10 +40,10 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://limifyze.com/en/legal" />
     </url>
     <url>
-        <loc>https://limifyze.com/disclaimer</loc>
+        <loc>https://limifyze.com/privacy</loc>
         <lastmod>2023-09-21T00:00:00+00:00</lastmod>
         <priority>0.40</priority>
-        <xhtml:link rel="alternate" hreflang="de" href="https://limifyze.com/de/disclaimer" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://limifyze.com/en/disclaimer" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://limifyze.com/de/privacy" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://limifyze.com/en/privacy" />
     </url>
 </urlset>
