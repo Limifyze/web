@@ -90,7 +90,7 @@ const BlogArticle = async ({ params: { lang, slug } }: Props) => {
 
 // get static props for each article
 
-export async function getData(params: Props["params"]) {
+async function getData(params: Props["params"]) {
   const filter = {
     slug: params?.slug,
   }
