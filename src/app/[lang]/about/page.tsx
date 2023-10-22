@@ -1,4 +1,3 @@
-import { useRef, useEffect } from "react"
 import { Locale } from "@/middleware"
 import Hero from "../../../components/about/Hero"
 import Nav from "../../../components/home/Nav"

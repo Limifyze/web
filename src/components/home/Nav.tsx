@@ -6,6 +6,7 @@ import { Locale, locales } from "@/middleware"
 import Link from "next/link"
 
 const navigation = [
+  { name: { de: "Home", en: "Home" }, href: "/" },
   {
     name: {
       de: "Selfservice-Bar",
@@ -18,7 +19,7 @@ const navigation = [
     name: { de: "Produktentwicklung", en: "Product Development" },
     href: "/development",
   },
-  // { name: { de: "Blog", en: "Blog" }, href: "#" },
+  { name: { de: "Blog", en: "Blog" }, href: "/blog" },
   {
     name: { de: "Ledovation", en: "Ledovation" },
     href: "https://ledovation.at",
@@ -33,7 +34,7 @@ export default function Nav({ lang }: { lang: Locale }) {
       <div className="mx-auto max-w-7xl">
         <div className="px-6 pt-6 lg:max-w-7xl lg:pl-8 lg:pr-0">
           <nav
-            className="flex items-center justify-between lg:justify-start"
+            className="flex items-center justify-between xl:justify-start"
             aria-label="Global"
           >
             <Link href="/" className="-m-1.5 p-1.5">
@@ -46,13 +47,13 @@ export default function Nav({ lang }: { lang: Locale }) {
             </Link>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden"
+              className="-m-2.5 rounded-md p-2.5 text-gray-700 xl:hidden"
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
-            <div className="hidden lg:ml-auto pr-4 lg:flex lg:gap-x-14">
+            <div className="hidden xl:ml-auto pr-4 xl:flex xl:gap-x-14">
               {navigation.map((item) =>
                 item.href.startsWith("/") ? (
                   <Link
@@ -102,7 +103,7 @@ export default function Nav({ lang }: { lang: Locale }) {
       </div>
       <Dialog
         as="div"
-        className="lg:hidden"
+        className="xl:hidden"
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >
@@ -111,7 +112,7 @@ export default function Nav({ lang }: { lang: Locale }) {
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Limifyze GmbH</span>
-              <img className="h-8 w-auto" src="/logo.svg" alt="" />
+              <img className="h-8 w-auto" src="/assets/logo.svg" alt="" />
             </Link>
             <button
               type="button"

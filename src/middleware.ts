@@ -1,4 +1,3 @@
-import { match } from "@formatjs/intl-localematcher"
 import Negotiator from "negotiator"
 import { NextRequest } from "next/server"
 
@@ -37,5 +36,14 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/", "/ssb", "/about", "/development", "/legal", "/privacy"],
+  matcher: [
+    "/",
+    "/ssb",
+    "/about",
+    "/development",
+    "/legal",
+    "/privacy",
+    "/blog",
+    "/blog/:slug*",
+  ],
 }

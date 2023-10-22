@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: ["cms.limifyze.com"],
+  },
   redirects: async () => {
     return [
       {
