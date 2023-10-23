@@ -7,9 +7,11 @@ import { Fade } from "react-awesome-reveal"
 const translations = {
   de: {
     title: "In 30 Sekunden zum Lieblingsgetränk",
+    youtube: "_fSSHZuYGR8",
   },
   en: {
     title: "In 30 seconds to your favorite drink",
+    youtube: "lElMXcp79pQ",
   },
 }
 
@@ -119,6 +121,16 @@ export default function Functionality({ lang }: { lang: Locale }) {
             </div>
           ))}
           <BackgroundY />
+        </div>
+        {/* embed youtube */}
+        <div className="mt-24">
+          <iframe
+            allowFullScreen
+            className="w-full h-[500px] my-8 rounded-lg shadow-lg"
+            src={`https://www.youtube.com/embed/${translations[lang].youtube}`}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          ></iframe>
         </div>
       </div>
     </div>
