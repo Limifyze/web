@@ -86,13 +86,15 @@ export async function generateStaticParams() {
   return [{ lang: "en" }, { lang: "de" }]
 }
 
-export default function Home({
+export default async function Home({
   params: { lang },
 }: {
   params: {
     lang: Locale
   }
 }) {
+  const faqs = (await getData({ lang })).faq
+
   return (
     <main className="bg-white overflow-x-hidden">
       <Nav lang={lang} />
@@ -106,8 +108,26 @@ export default function Home({
       <Hygiene lang={lang} />
       <IoT lang={lang} />
       <ContactCTA lang={lang} />
-      <FAQ lang={lang} />
+      <FAQ faqs={faqs} />
       <Footer lang={lang} />
     </main>
   )
+}
+
+async function getData(params: { lang: Locale }) {
+  const faqs = await fetch(
+    "https://cms.limifyze.com/:website-limifyze-com/api/content/items/FAQ?locale=" +
+      params.lang,
+    {
+      cache: "force-cache",
+      next: {
+        revalidate: 10, // In seconds
+      },
+    }
+  )
+  const faqsJson = await faqs.json()
+
+  return {
+    faq: faqsJson,
+  }
 }
