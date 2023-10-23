@@ -105,16 +105,9 @@ async function getData({ locale }: { locale: Locale }) {
     }
   )
 
-  const tagFields = {
-    slug: 1,
-    title: 1,
-    _id: 1,
-  }
   const tags = await fetch(
     "https://cms.limifyze.com/:website-limifyze-com/api/content/items/Tag?locale=" +
-      lang +
-      "&fields=" +
-      JSON.stringify(tagFields),
+      lang,
     {
       cache: "force-cache",
       next: {

@@ -12,6 +12,7 @@ import Dekors from "@/components/ssb/Dekors"
 import Hygiene from "@/components/ssb/Hygiene"
 import IoT from "@/components/ssb/IoT"
 import { Metadata, ResolvingMetadata } from "next"
+import FAQ from "@/components/ssb/FAQ"
 
 type Props = {
   params: { lang: Locale }
@@ -105,6 +106,7 @@ export default function Home({
       <Hygiene lang={lang} />
       <IoT lang={lang} />
       <ContactCTA lang={lang} />
+      <FAQ lang={lang} />
       <Footer lang={lang} />
     </main>
   )
