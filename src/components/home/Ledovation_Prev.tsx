@@ -8,7 +8,7 @@ const translations = {
     additional: "Zusatzumsätze erzielen",
     theSmart: "Die smarte Tischleuchte für die Gastronomie.",
     explaination:
-      "Der SERVICETUBE® wird durch Berührung rot und benachrichtigt das Servicepersonal in Echtzeit per App oder Smartwatch dank neuester Funktechnologie auch in großräumigen Restaurants.",
+      "Der SERVICETUBE® wird durch Berührung rot und benachrichtigt das Servicepersonal in Echtzeit per App oder Smartwatch über neue Service-Wünsche. Mit Ledovation bleiben Sie persönlich, werden Sie effizienter.",
     cta: "Zu Ledovation",
   },
   en: {
@@ -17,7 +17,7 @@ const translations = {
     additional: "generate additional sales",
     theSmart: "The smart table lamp for the gastronomy.",
     explaination:
-      "The SERVICETUBE® turns red when touched and notifies the service staff in real time via app or smartwatch thanks to the latest radio technology, even in large restaurants.",
+      "The SERVICETUBE® turns red when touched and notifies service personnel of new service requests in real time via app or smartwatch. Stay personal, become more efficient with Ledovation.",
     cta: "To Ledovation",
   },
 }

@@ -6,23 +6,24 @@ const translations = {
   de: {
     LimSelf: "Limifyze Selfservice-Bar",
     in30Sec: "In 30 Sekunden zum Lieblingsgetränk",
-    thisSystem: "Dieses System ermöglicht es dem Betreiber",
+    thisSystem:
+      "Die Selfservice-Bar serviert Ihren Gästen rund um die Uhr frische Drinks. Ihre Gäste bedienen die Selfservice-Bar selbständig",
     withOneFill:
-      "mit nur einer einzigen Füllung, ohne Personal bis zu 150 Cocktails",
-    or: "oder 300 Shots an seine Gäste zu verkaufen.",
+      "mit nur einer Füllung können bis zu 150 Getränke ausgeschenkt und verkauft werden.",
+    or: "",
     theSelfserviceBar:
-      "Die SELFSERVICE-BAR ist ein vollautomatisches Getränke-Mix-, Ausschank- und Vending-System, mit dem der Gast nach Barschluss oder auch untertags in gut frequentierten Bereichen ohne Bar-Mitarbeiter selbst einen Cocktail mixen und per Kreditkarte oder Handy bezahlen kann.",
+      "Die Bezahlung der Getränke erfolgt per NFC mit Kreditkarte, Bankomatkarte oder Smartphone. Das breite Getränkesortiment und die Mobilität durch Fahrrollen ermöglichen den Einsatz von morgens beim Frühstück bis nachts im Barbetrieb.",
     cta: "Zur Selfservice-Bar",
   },
   en: {
     LimSelf: "Limifyze Selfservice-Bar",
     in30Sec: "In 30 seconds to your favorite drink",
-    thisSystem: "This system allows the operator",
+    thisSystem: "The self-service bar serves your guests fresh drinks around the clock. Your guests operate the self-service bar independently",
     withOneFill:
-      "to sell up to 150 cocktails or 300 shots to his guests with just one filling, without personnel.",
+      "with only one filling, up to 150 drinks can be served and sold.",
     or: "",
     theSelfserviceBar:
-      "The SELFSERVICE-BAR is a fully automatic drink mixing, dispensing and vending system that allows the guest to mix a cocktail himself after closing time or during the day in well-frequented areas without bar staff and pay by credit card or mobile phone.",
+      "Drinks are paid for via NFC using a credit card, ATM card or smartphone. The wide range of beverages and the mobility through castors allow the use from breakfast in the morning to bar operation at night.",
     cta: "To the self-service bar",
   },
 }

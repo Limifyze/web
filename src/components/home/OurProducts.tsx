@@ -6,7 +6,7 @@ const tranlsations = {
     for: "Für die Zukunft der Gastlichkeit.",
     weWant: "Wir entwickeln neue Produkte für Hotels und Restaurants.",
     and: "Maximale Gästezufriedenheit mit effizientem Personaleinsatz ist unser Ziel. Daran arbeiten wir täglich gemeinsam mit unseren Kunden.",
-    as: "Als Entwickler und Hersteller von Automatisierungs- und IoT-Produkten ist es unser Ziel durch moderne Technologien innovative Produkte zu entwickeln und zu produzieren.",
+    as: "Als Entwickler und Hersteller von Automatisierungs- und IoT-Produkten ist es unser Ziel, mit modernen Technologien innovative Produkte zu entwickeln und zu produzieren.",
   },
   en: {
     ourProds: "Smart Products.",
