@@ -107,6 +107,14 @@ export default function IoT({ lang }: { lang: Locale }) {
           </div>
         </div>
       </div>
+      <Image
+        src="/assets/ssb.jpg"
+        alt="Limifyze Selfservice-Bar"
+        width={1920}
+        height={1080}
+        quality={100}
+        className="max-w-7xl mt-32 mx-auto"
+      />
     </div>
   )
 }

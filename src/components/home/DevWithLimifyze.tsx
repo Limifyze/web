@@ -63,7 +63,7 @@ const features = [
       de: "Nach erfolgreicher Pilotphase wird das Produkt in Serie produziert und ausgeliefert.",
       en: "After a successful pilot phase, the product is produced and delivered in series.",
     },
-    image: "/assets/final.jpg",
+    image: "/assets/ssb_front.jpg",
   },
 ]
 

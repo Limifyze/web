@@ -97,6 +97,14 @@ export default function ManyFeatures({ lang }: { lang: Locale }) {
           ))}
         </dl>
       </div>
+      <Image
+        src="/assets/broell_cc_004.jpg"
+        alt="Selfservice Bar"
+        className="w-full mx-auto object-contain max-w-7xl mt-32 xl:rounded-3xl"
+        width={1500}
+        height={1500}
+        quality={100}
+      />
     </div>
   )
 }
