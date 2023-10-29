@@ -113,7 +113,7 @@ export default function IoT({ lang }: { lang: Locale }) {
         width={1920}
         height={1080}
         quality={100}
-        className="max-w-7xl mt-32 mx-auto"
+        className="max-w-7xl mt-32 mx-auto w-full"
       />
     </div>
   )
