@@ -11,6 +11,9 @@ const translations = {
     infoOnlineText:
       "Consumers have the opportunity to submit complaints to the EU's online dispute resolution platform: https://ec.europa.eu/odr. You can also send any complaints to the e-mail address given above.",
     md: "Managing Directors",
+    photos: "Photos",
+    photosText:
+      "Many thanks to Nina Bröll! (<a href='https://broell.cc' target='_blank'>broell.cc</a>)",
   },
   de: {
     title: "Impressum",
@@ -20,6 +23,9 @@ const translations = {
     infoOnlineText:
       "Verbraucher haben die Möglichkeit, Beschwerden an die Online-Streitbeilegungsplattform der EU zu richten: https://ec.europa.eu/odr. Sie können auch Beschwerden an die oben angegebene E-Mail-Adresse senden.",
     md: "Geschäftsführer",
+    photos: "Fotos",
+    photosText:
+      'Herzlichen Dank an Nina Bröll! (<a href="https://broell.cc" target="_blank">broell.cc</a>)',
   },
 }
 
@@ -87,6 +93,15 @@ const Home = ({
               <p className="mt-4 text-lg leading-8 text-gray-800">
                 {translations[lang].infoOnlineText}
               </p>
+              <h3 className="mt-10 text-lg font-bold">
+                {translations[lang].photos}
+              </h3>
+              <p
+                className="mt-4 text-lg leading-8 text-gray-800"
+                dangerouslySetInnerHTML={{
+                  __html: translations[lang].photosText,
+                }}
+              />
             </div>
           </div>
         </div>
